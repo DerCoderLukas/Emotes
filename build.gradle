@@ -1,0 +1,45 @@
+plugins {
+  id 'java'
+}
+
+group 'de.lukasbreuer'
+version '1.0.0-SNAPSHOT'
+
+repositories {
+  google()
+  mavenLocal()
+  mavenCentral()
+  maven {
+    url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+  }
+  maven {
+    url = "https://oss.sonatype.org/content/repositories/snapshots"
+  }
+  maven {
+    url = "https://libraries.minecraft.net/"
+  }
+}
+
+jar {
+  duplicatesStrategy = 'exclude'
+  from {
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
+
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+  implementation 'com.google.inject:guice:5.0.1'
+  implementation 'org.projectlombok:lombok:1.18.20'
+  annotationProcessor 'org.projectlombok:lombok:1.18.20'
+  testCompileOnly 'org.projectlombok:lombok:1.18.20'
+  testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.4'
+  implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.4'
+  compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+}
+
+test {
+  useJUnitPlatform()
+}
