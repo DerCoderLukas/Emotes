@@ -1,0 +1,15 @@
+name: Emotes
+author: DerCoder
+version: 1.0.0
+main: de.lukasbreuer.emotes.EmotesPlugin
+api-version: 1.17
+
+commands:
+  emote:
+    description: Provides all interaction opportunities of the emote system.
+    permission: emote.command
+
+permissions:
+  emote.*:
+    description: "Gives you access to all of the emote system"
+    default: op
