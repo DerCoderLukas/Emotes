@@ -15,8 +15,8 @@ public final class Illustration {
   private final int width;
   private final int height;
 
-  private static final float PARTICLE_SIZE = 0.17f;
-  private static final int PARTICLE_COUNT = 2;
+  private static final float PARTICLE_SIZE = 0.25f;
+  private static final int PARTICLE_COUNT = 1;
 
   public void display(Collection<? extends Player> players, Location location) {
     for (var y = 0; y < height; y++) {
