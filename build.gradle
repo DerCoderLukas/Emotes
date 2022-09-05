@@ -36,7 +36,7 @@ dependencies {
   testCompileOnly 'org.projectlombok:lombok:1.18.20'
   testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
   implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
-  implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.1'
+  implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.4'
   compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
 }
 
